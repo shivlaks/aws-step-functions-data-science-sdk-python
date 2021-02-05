@@ -30,6 +30,7 @@ Table of Contents
 - `AWS Permissions <#aws-permissions>`__
 - `Licensing <#licensing>`__
 - `Verifying the Signature <#verifying-the-signature>`__
+- testing
 
 Getting Started With Sample Jupyter Notebooks
 ---------------------------------------------
