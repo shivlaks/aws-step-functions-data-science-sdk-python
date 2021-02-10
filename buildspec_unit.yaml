@@ -10,4 +10,4 @@ phases:
     commands:
       - twine check dist/*	
       - tox tests/unit/	
-      - tox tests/integ/
+      - tox tests/integ/ --skip-pkg-install
