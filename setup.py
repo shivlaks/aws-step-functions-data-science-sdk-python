@@ -71,3 +71,8 @@ setup(
         ]
     }
 )
+
+build_metadata = {"name": "aws-sfn", "version": read_version(), "commit_id": os.getenv('CODEBUILD_RESOLVED_SOURCE_VERSION') }
+with open("build.json", "w") as outputfile:
+    json.dump(build_metadata, outputfile)
+print(build_metadata)
