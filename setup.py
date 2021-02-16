@@ -15,7 +15,6 @@ from __future__ import absolute_import
 import os
 from glob import glob
 import sys
-import subprocess
 
 from setuptools import setup, find_packages
 
@@ -72,9 +71,3 @@ setup(
         ]
     }
 )
-
-commit_id = subprocess.check_output(['git', 'rev-parse', '--verify', 'HEAD'])
-build_metadata = {"name": "aws-sfn", "version": read_version(), "commit_id": commit_id.decode('utf-8').strip()}
-with open("build.json", "w") as outputfile:
-    json.dump(build_metadata, outputfile)
-print(build_metadata)
