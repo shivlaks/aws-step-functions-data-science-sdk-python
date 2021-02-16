@@ -74,7 +74,6 @@ the sample notebooks and open them in a working Jupyter instance.
 3. Open the files in Jupyter.
 
 
-
 Installing the AWS Step Functions Data Science SDK
 --------------------------------------------------
 
