@@ -55,7 +55,6 @@ notebooks** portion of a notebook instance. To run the example notebooks, do the
 For more information, see `Example Notebooks <https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-nbexamples.html>`__
 in the Amazon SageMaker documentation.
 
-
 Run Example Notebooks Locally
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
