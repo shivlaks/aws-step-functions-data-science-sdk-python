@@ -15,6 +15,7 @@ from __future__ import absolute_import
 import os
 from glob import glob
 import sys
+import subprocess
 
 from setuptools import setup, find_packages
 
