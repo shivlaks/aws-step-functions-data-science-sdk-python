@@ -16,6 +16,7 @@ import os
 from glob import glob
 import sys
 import json
+import subprocess
 
 from setuptools import setup, find_packages
 
@@ -27,6 +28,18 @@ def read(fname):
 
 def read_version():
     return read("VERSION").strip()
+
+def source_version():
+    source_version = os.getenv('CODEBUILD_RESOLVED_SOURCE_VERSION')
+    if source_version is None:
+        source_version = subprocess.check_output(['git', 'rev-parse', '--verify', 'HEAD']).decode('utf-8').strip()
+    return source_version
+
+def generate_build_metadata():
+    build_metadata = {"name": "aws-step-functions-data-science-sdk-python", "version": read_version(),
+                      "commit": source_version()}
+    with open("build.json", "w") as outputfile:
+        json.dump(build_metadata, outputfile)
 
 
 # Declare minimal set for installation
